@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="rl_title_background">#ffcc2126</color>
+    <color name="red">#ffff0000</color>
+    <color name="grey">#ff888888</color>
+    
+    <color name="rg_main_title_background">#fffafafa</color>
+</resources>
