@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivIcon"
+        android:text="你好。。。。" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:text="12点........"
+        android:textSize="@dimen/grid_item_mark_text_size" />
+
+    <ImageView
+        android:id="@+id/ivGood"
+        android:layout_width="18dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvTime"
+        android:layout_alignTop="@+id/tvTime"
+        android:layout_toRightOf="@+id/tvTime"
+        android:src="@drawable/iv_content_good" />
+
+    <TextView
+        android:id="@+id/tvGoodNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvTime"
+        android:layout_alignTop="@+id/tvTime"
+        android:layout_toRightOf="@+id/ivGood"
+        android:text="12"
+        android:textSize="@dimen/grid_item_mark_text_size" />
+    <ImageView
+        android:id="@+id/ivComment"
+        android:layout_width="18dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvTime"
+        android:layout_alignTop="@+id/tvTime"
+        android:layout_toRightOf="@+id/tvGoodNum"
+        android:src="@drawable/iv_content_good" />
+
+    <TextView
+        android:id="@+id/tvCommentNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvTime"
+        android:layout_alignTop="@+id/tvTime"
+        android:layout_toRightOf="@+id/ivComment"
+        android:text="12"
+        android:textSize="@dimen/grid_item_mark_text_size" />
+
+</RelativeLayout>
