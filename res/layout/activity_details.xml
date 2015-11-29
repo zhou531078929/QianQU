@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp"
+    tools:context="com.example.day31.ContentActivity" >
+
+   
+    
+    
+
+    <WebView 
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/webView_content0"
+        android:layout_below="@+id/textView_content0_source"
+        android:layout_above="@+id/weibo_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="5dp"
+        />
+
+     <TextView
+        android:id="@+id/textView_content0_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="title"
+        android:visibility="invisible"
+        />
+    
+    <TextView
+        android:id="@+id/textView_content0_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView_content0_source"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@+id/textView_content0_source"
+        android:text="time"
+        android:visibility="invisible"
+         />
+
+    <TextView
+        android:id="@+id/textView_content0_source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_content0_title"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@+id/textView_content0_title"
+       android:text="source"
+       android:visibility="invisible"
+       
+       
+         />
+
+     <ImageView
+        android:id="@+id/weibo_content"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:onClick="click"
+        android:src="@drawable/detail_bar_share_selected" />
+   
+
+    <ImageView
+        android:id="@+id/zan_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/webView_content0"
+        android:layout_alignBottom="@+id/weibo_content"
+        android:src="@drawable/qianqu_detailbar_zan_normal" />
+
+    <ImageView
+        android:id="@+id/shoucang_content"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignBottom="@+id/weibo_content"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:onClick="click"
+        android:src="@drawable/detail_bar_collect_pray" />
+    
+</RelativeLayout>
