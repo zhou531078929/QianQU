@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.util.Log;
 import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
@@ -57,6 +58,7 @@ public class MainActivity extends FragmentActivity implements OnCheckedChangeLis
 	public void onCheckedChanged(RadioGroup group, int checkedId) {
 		switch (checkedId) {
 		case R.id.radio0:// 最新
+			Log.d("print", "打印");
 			vpContent.setCurrentItem(0);
 			break;
 		case R.id.radio1:// 热门
