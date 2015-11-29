@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.handmark.pulltorefresh.library.PullToRefreshGridView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
     android:id="@+id/gridHomeContent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:horizontalSpacing="10dp"
     android:numColumns="2"
+    android:stretchMode="columnWidth"
     android:verticalSpacing="10dp"
-    android:stretchMode="columnWidth" />
+    ptr:ptrAnimationStyle="flip"
+    ptr:ptrListViewExtrasEnabled="false"
+    ptr:ptrMode="both"
+    ptr:ptrScrollingWhileRefreshingEnabled="true"
+    ptr:ptrShowIndicator="true" />

@@ -3,8 +3,12 @@ package com.hohd.interest.adapter;
 import java.util.List;
 
 import com.hohd.interest.R;
+import com.hohd.interest.bean.NewsItem;
+import com.hohd.interest.utils.ImageCacheHelper;
+import com.hohd.interest.utils.ImageCacheHelper.OnImageDownloadListener;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -12,10 +16,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class HomeGridAdapter extends BaseAdapter {
-	List<?> list;
+	List<NewsItem> list;
 	Context context;
 
-	public HomeGridAdapter(List<?> list, Context context) {
+	public HomeGridAdapter(List<NewsItem> list, Context context) {
 		super();
 		this.list = list;
 		this.context = context;
@@ -23,7 +27,7 @@ public class HomeGridAdapter extends BaseAdapter {
 
 	@Override
 	public int getCount() {
-		return 10;
+		return list.size();
 	}
 
 	@Override
@@ -45,6 +49,7 @@ public class HomeGridAdapter extends BaseAdapter {
 		} else {
 			convertView = View.inflate(context, R.layout.item_grid_content, null);
 			holder = new ViewHolder();
+			convertView.setTag(holder);
 
 			holder.ivIcon = (ImageView) convertView.findViewById(R.id.ivIcon);
 
@@ -54,6 +59,16 @@ public class HomeGridAdapter extends BaseAdapter {
 			holder.tvCommentNum = (TextView) convertView.findViewById(R.id.tvCommentNum);
 
 		}
+		holder.tvTitle.setText(list.get(position).title);
+		final ImageView iv = holder.ivIcon;
+		new ImageCacheHelper().imageDownload("http://www.qianqu.cc"+list.get(position).thumbnail, holder.ivIcon, new OnImageDownloadListener() {
+
+			@Override
+			public void onImageDownload(Bitmap bitmap) {
+				iv.setImageBitmap(bitmap);
+			}
+
+		});
 
 		return convertView;
 	}
