@@ -8,7 +8,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
@@ -21,6 +23,7 @@ public class MainActivity extends FragmentActivity implements OnCheckedChangeLis
 	RadioGroup rgTitle;
 	List<Fragment> list;
 	int[] ids = { R.id.radio0, R.id.radio1, R.id.radio2, R.id.radio3, R.id.radio4 };
+	DrawerLayout drawerLayout;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,16 @@ public class MainActivity extends FragmentActivity implements OnCheckedChangeLis
 	}
 
 	public void click(View view) {
+		switch (view.getId()) {
+		case R.id.ivHeadIcon:// 头部按钮，跳到左边的侧滑页
+			// 打开侧滑页
+			drawerLayout.openDrawer(Gravity.LEFT);
+
+			break;
+
+		default:
+			break;
+		}
 
 	}
 
@@ -42,6 +55,10 @@ public class MainActivity extends FragmentActivity implements OnCheckedChangeLis
 
 		rgTitle = (RadioGroup) findViewById(R.id.rgTitle);
 		rgTitle.setOnCheckedChangeListener(this);
+
+		// 侧滑页
+		drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+		drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
 
 		for (int i = 0; i < 5; i++) {
 			ContentFragment fragment = ContentFragment.create(i);
