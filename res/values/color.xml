@@ -5,4 +5,5 @@
     <color name="grey">#ff888888</color>
     
     <color name="rg_main_title_background">#fffafafa</color>
+    <color name="menu_bg">#ffe4e4e4</color>
 </resources>

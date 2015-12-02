@@ -17,6 +17,7 @@ import android.widget.RadioGroup.OnCheckedChangeListener;
 
 import com.hohd.interest.adapter.HomeContentAdapter;
 import com.hohd.interest.fragment.ContentFragment;
+import com.hohd.interest.fragment.LeftMenuFragment;
 
 public class MainActivity extends FragmentActivity implements OnCheckedChangeListener, OnPageChangeListener {
 	ViewPager vpContent;
@@ -59,6 +60,9 @@ public class MainActivity extends FragmentActivity implements OnCheckedChangeLis
 		// 侧滑页
 		drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
 		drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
+
+		LeftMenuFragment fragmentMenu = new LeftMenuFragment();
+		getSupportFragmentManager().beginTransaction().replace(R.id.drawer, fragmentMenu).commit();
 
 		for (int i = 0; i < 5; i++) {
 			ContentFragment fragment = ContentFragment.create(i);

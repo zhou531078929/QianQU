@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/menu_bg"
+    android:orientation="vertical" >
+
+    <!--
+    你好
+    
+    ssss
+    -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_left_height"
+        android:background="#ff0000"
+        android:gravity="center"
+        android:text="设置"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnReview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_left_height"
+        android:background="#ffffff"
+        android:drawableBottom="@drawable/view_line"
+        android:drawableRight="@drawable/browser_forward_available"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="@dimen/menu_left_button_padding"
+        android:paddingRight="@dimen/menu_left_button_padding"
+        android:text="审核新趣事" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_left_height"
+        android:background="#ffffff"
+        android:drawableBottom="@drawable/view_line"
+        android:drawableRight="@drawable/browser_forward_available"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="@dimen/menu_left_button_padding"
+        android:paddingRight="@dimen/menu_left_button_padding"
+        android:text="账户设置" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_left_height"
+        android:background="#ffffff"
+        android:drawableRight="@drawable/browser_forward_available"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="@dimen/menu_left_button_padding"
+        android:paddingRight="@dimen/menu_left_button_padding"
+        android:text="我的收藏" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_left_height"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        android:drawableBottom="@drawable/view_line"
+        android:drawableRight="@drawable/browser_forward_available"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="@dimen/menu_left_button_padding"
+        android:paddingRight="@dimen/menu_left_button_padding"
+        android:text="夜间模式切换" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_left_height"
+        android:background="#ffffff"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="@dimen/menu_left_button_padding"
+        android:paddingRight="@dimen/menu_left_button_padding"
+        android:text="清除缓存" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_left_height"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        android:drawableBottom="@drawable/view_line"
+        android:drawableRight="@drawable/browser_forward_available"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="@dimen/menu_left_button_padding"
+        android:paddingRight="@dimen/menu_left_button_padding"
+        android:text="关于" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_left_height"
+        android:background="#ffffff"
+        android:drawableBottom="@drawable/view_line"
+        android:drawableRight="@drawable/browser_forward_available"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="@dimen/menu_left_button_padding"
+        android:paddingRight="@dimen/menu_left_button_padding"
+        android:text="反馈" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_left_height"
+        android:background="#ffffff"
+        android:drawableBottom="@drawable/view_line"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="@dimen/menu_left_button_padding"
+        android:paddingRight="@dimen/menu_left_button_padding"
+        android:text="分享" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_left_height"
+        android:background="#ffffff"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="@dimen/menu_left_button_padding"
+        android:paddingRight="@dimen/menu_left_button_padding"
+        android:text="检查更新" />
+
+</LinearLayout>

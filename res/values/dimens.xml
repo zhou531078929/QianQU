@@ -7,5 +7,7 @@
     <dimen name="head_size">28.0dip</dimen>
     <dimen name="title_bar_height">44.0dip</dimen>
     <dimen name="top_category_height">40.0dip</dimen>
+    <dimen name="menu_left_height">40.0dip</dimen>
+    <dimen name="menu_left_button_padding">10.0dip</dimen>
 
 </resources>
